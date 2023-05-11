@@ -39,7 +39,7 @@ def get_ip():
         s.close()
     return IP
 
-ALLOWED_HOSTS = [get_ip()]
+ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -69,7 +69,7 @@ ROOT_URLCONF = 'ECellDjangoProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

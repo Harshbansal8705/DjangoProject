@@ -18,14 +18,14 @@ def signup(request):
             lastname = request.POST.get('lastname')
             email = request.POST.get('email')
             password = request.POST.get('password')
-            # confirmpassword = request.POST['confirmpassword']
-            # print(firstname );
+            confirmpassword = request.POST['confirmpassword']
+            print(firstname );
             
-            # myuser = User.objects.create_user(name,email,password)
-            # myuser.first_name = firstname
-            # myuser.last_name = lastname
-            # myuser.save()
-            # messages.success(request, "Your Account has been Created")
+            myuser = User.objects.create_user(name,email,password)
+            myuser.first_name = firstname
+            myuser.last_name = lastname
+            myuser.save()
+            messages.success(request, "Your Account has been Created")
 
 
             return redirect('signin')
