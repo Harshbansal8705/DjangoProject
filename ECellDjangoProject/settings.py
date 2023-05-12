@@ -43,8 +43,8 @@ ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1']
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "harshbansal8705@gmail.com"
-EMAIL_HOST_PASSWORD = "yekxmqxbboggkqnt"
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
 EMAIL_USE_TLS = True
 
 # Application definition
