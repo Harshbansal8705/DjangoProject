@@ -41,6 +41,11 @@ def get_ip():
 
 ALLOWED_HOSTS = [get_ip()]
 
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "harshbansal8705@gmail.com"
+EMAIL_HOST_PASSWORD = "yekxmqxbboggkqnt"
+EMAIL_USE_TLS = True
 
 # Application definition
 
@@ -68,7 +73,7 @@ ROOT_URLCONF = 'ECellDjangoProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,3 +140,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.ModelBackend',
+    )
