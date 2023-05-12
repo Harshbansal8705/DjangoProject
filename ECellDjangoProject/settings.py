@@ -39,7 +39,7 @@ def get_ip():
         s.close()
     return IP
 
-ALLOWED_HOSTS = [get_ip()]
+ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1']
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authentication'
 ]
 
 MIDDLEWARE = [
