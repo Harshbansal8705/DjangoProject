@@ -6,14 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
+<style>
+    :root {
+        --accent-col: #14203e;
+      }
+      
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        color: var(--accent-col);
+        font-family: "IBM Plex Sans";
+      }
+      
+      body {
+        background: beige;
+        margin: 0;
+        padding: 0;
+      }
+      
+      
+      
+      .title {
+        font-size: 66px;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 130px;
+        padding-bottom: 30px;
+      }
+      
+      .description {
+        font-size: 22px;
+        font-weight: 500;
+        text-align: center;
+        padding-bottom: 40px;
+      }
+      
+      .cta {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .start-trial {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: yellow;
+        border-radius: 10px;
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: 900;
+        color: white;
+        margin-bottom: 130px;
+        // gap: 10px;
+        // text-decoration: none;
+      }
+      
+      .divider {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+        padding-top: 15px;
+      }
+      
+      .articles {
+        background-color: white;
+        height: 100vh;
+        position: relative;
+        width: 100%;
+      }
+      
+      .page-divider {
+        width: 200px;
+        height: 1px;
+        background: rgba(20, 32, 62, 0.2);
+      }
+      
+      .our-thoughts {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      
+      .listed-articles {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 30px;
+      }
+      
+      .article-desc {
+        font-size: 22px;
+        font-weight: 700;
+        padding-top: 20px;
+      }
+      
+      .date {
+        font-size: 14px;
+        font-weight: 400;
+        padding-top: 15px;
+      }
+      
+      
+      .article img:hover, .article-desc:hover, .navbar li:hover{
+        cursor: pointer;
+      }
+      
+      .start-trial:hover{
+        cursor: pointer;
+        opacity: 0.6;
+      }
+</style>
 <body>
 
-    <h1>This is home page</h1>
+    {% comment %} <h1>This is home page</h1> {% endcomment %}
+
+    {% comment %} {% if user.is_authenticated %} {% endcomment %}
+    {% comment %} <h3>Hello {{ firstname }}</h3> {% endcomment %}
 
 
-    <button type="submit"> <a href="/signup">SignUp</a></button>
-    <button type="submit"> <a href="/signin">SignIn</a></button>
-    <button type="submit"> <a href="/signout">SignOut</a></button>
+    {% comment %} <button type="submit"> <a href="/signup">SignUp</a></button> {% endcomment %}
+    {% comment %} <button type="submit"> <a href="/signin">SignIn</a></button> {% endcomment %}
+    {% comment %} {% else %} {% endcomment %}
+    {% comment %} <button type="submit"> <a href="/signout">SignOut</a></button> {% endcomment %}
+    {% comment %} {% endif %} {% endcomment %}
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=IBM Plex Sans" rel="stylesheet" />
+  <title>Landing Page</title>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+
+    </div>
+  </nav>
+  <section>
+    <div class="title">ENTREPRENEURSHIP CELL</div>
+    <div class="description">The Entrepreneurship Cell (E-cell) at the Indian Institute of Technology (IIT) Kharagpur is a student-run organization that is dedicated to promoting the spirit of entrepreneurship and innovation among the student community. The organization was established in 2006 and has since been an active platform for students to nurture their entrepreneurial skills and bring their innovative ideas to life.
+
+The E-cell at IIT Kharagpur organizes a wide range of events and programs that provide students with exposure to the world of entrepreneurship. These events include talks by successful entrepreneurs, workshops, mentoring sessions, business plan competitions, and hackathons. The E-cell also offers a startup accelerator program that provides students with funding, mentorship, and other resources to help them launch their startups.
+
+One of the main objectives of the E-cell at IIT Kharagpur is to create a vibrant startup ecosystem on campus. The organization has established a network of alumni, industry partners, and investors who provide support and guidance to students looking to start their own businesses. The E-cell also collaborates with other entrepreneurship cells across the country to organize events and programs that foster a culture of innovation and entrepreneurship among students..</div>
+    <div class="cta">
+<!--       <div class="start-trial">Start free tria</div> -->
+      <button type="submit" class="start-trial"> <a href="/signup">SignUp</a></button>
+      <button type="submit" class="start-trial"> <a href="/signin">SignIn</a></button>
+    </div>
+  </section>
+  
+</body>
+
+</html>
 
     
 </body>
