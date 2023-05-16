@@ -9,6 +9,8 @@ from django.contrib import messages
 
 def home(request):
     return render(request, "authentication/index.html")
+def contact(request):
+    return render(request, "authentication/contact.html")
 def signup(request):
     
 
